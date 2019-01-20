@@ -15,7 +15,7 @@ import java.util.List;
 public class SearchController {
 
     @Autowired
-    SearchService searchService;gi
+    SearchService searchService;
 
     @RequestMapping(value = "addProductsToSearch",method = RequestMethod.POST)
     public ResponseEntity<String> addProductsToSolr(@RequestBody ProductsSearchDTO productsSearchDTO)
