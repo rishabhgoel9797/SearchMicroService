@@ -1,7 +1,5 @@
 package com.example.SearchMicroService.dto;
 
-import com.example.SearchMicroService.Entity.BrandSearch;
-import com.example.SearchMicroService.Entity.SubCategorySearch;
 import org.apache.solr.client.solrj.beans.Field;
 
 import java.util.List;
@@ -12,8 +10,12 @@ public class ProductsSearchDTO {
     private String description;
     private String usp;
     private String productImage;
-//    public List<SubCategorySearch> subCategorySearches;
-    public BrandSearch brandSearch;
+
+    private List<String> categories;
+
+    private List<String> subCategories;
+
+    private List<String> brand;
 
     public String getProductId() {
         return productId;
@@ -55,20 +57,27 @@ public class ProductsSearchDTO {
         this.productImage = productImage;
     }
 
-//
-//    public List<SubCategorySearch> getSubCategorySearches() {
-//        return subCategorySearches;
-//    }
-//
-//    public void setSubCategorySearches(List<SubCategorySearch> subCategorySearches) {
-//        this.subCategorySearches = subCategorySearches;
-//    }
-//
-    public BrandSearch getBrandSearch() {
-        return brandSearch;
+    public List<String> getCategories() {
+        return categories;
     }
 
-    public void setBrandSearch(BrandSearch brandSearch) {
-        this.brandSearch = brandSearch;
+    public void setCategories(List<String> categories) {
+        this.categories = categories;
+    }
+
+    public List<String> getSubCategories() {
+        return subCategories;
+    }
+
+    public void setSubCategories(List<String> subCategories) {
+        this.subCategories = subCategories;
+    }
+
+    public List<String> getBrand() {
+        return brand;
+    }
+
+    public void setBrand(List<String> brand) {
+        this.brand = brand;
     }
 }

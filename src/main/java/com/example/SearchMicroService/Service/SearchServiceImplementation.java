@@ -29,4 +29,11 @@ public class SearchServiceImplementation implements SearchService{
     public ProductSearch getName(String name) {
         return searchRepository.findByProductName(name);
     }
+
+    @Override
+    public List<ProductSearch> findInSearch(String searchParameter) {
+        return searchRepository.findInSearch(searchParameter);
+    }
+
+
 }

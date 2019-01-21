@@ -9,4 +9,5 @@ public interface SearchService {
     ProductSearch addProduct(ProductSearch productSearch);
     Iterable<ProductSearch> searchAllProducts();
     ProductSearch getName(String name);
+    List<ProductSearch> findInSearch(String searchParameter);
 }

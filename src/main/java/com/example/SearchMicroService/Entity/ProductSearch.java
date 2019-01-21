@@ -22,11 +22,15 @@ public class ProductSearch {
     @Field
     private String productImage;
 
-//    @Field(child = true)
-//    public List<SubCategorySearch> subCategorySearches;
-//
+    @Field
+    private List<String> categories;
 
-    public BrandSearch brandSearch;
+    @Field
+    private List<String> subCategories;
+
+    @Field
+    private List<String> brand;
+
 
     public String getProductId() {
         return productId;
@@ -68,21 +72,27 @@ public class ProductSearch {
         this.productImage = productImage;
     }
 
-
-//    public List<SubCategorySearch> getSubCategorySearches() {
-//        return subCategorySearches;
-//    }
-//
-//    public void setSubCategorySearches(List<SubCategorySearch> subCategorySearches) {
-//        this.subCategorySearches = subCategorySearches;
-//    }
-//
-    public BrandSearch getBrandSearch() {
-        return brandSearch;
+    public List<String> getCategories() {
+        return categories;
     }
 
-    @Field(child = true)
-    public void setBrandSearch(BrandSearch brandSearch) {
-        this.brandSearch = brandSearch;
+    public void setCategories(List<String> categories) {
+        this.categories = categories;
+    }
+
+    public List<String> getSubCategories() {
+        return subCategories;
+    }
+
+    public void setSubCategories(List<String> subCategories) {
+        this.subCategories = subCategories;
+    }
+
+    public List<String> getBrand() {
+        return brand;
+    }
+
+    public void setBrand(List<String> brand) {
+        this.brand = brand;
     }
 }

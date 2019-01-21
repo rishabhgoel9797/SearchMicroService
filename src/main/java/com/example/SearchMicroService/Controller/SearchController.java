@@ -41,4 +41,10 @@ public class SearchController {
         ProductSearch test=searchService.getName(name);
         return test;
     }
+
+    @RequestMapping(value = "getInSearch/{searchParameter}",method = RequestMethod.GET)
+    public List<ProductSearch> getByCategory(@PathVariable String searchParameter)
+    {
+        return searchService.findInSearch(searchParameter);
+    }
 }
