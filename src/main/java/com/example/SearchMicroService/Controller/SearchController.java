@@ -27,12 +27,10 @@ public class SearchController {
         return new ResponseEntity<String>(productSearchCreated.getProductName(),HttpStatus.CREATED);
     }
 
-    @RequestMapping(value = "findAllProductsFromSearch",method = RequestMethod.GET,produces = {"application/json"})
-    public String getAllProductsFromSearch( )
+    @RequestMapping(value = "findAllProductsFromSearch",method = RequestMethod.GET)
+    public Iterable<ProductSearch> getAllProductsFromSearch( )
     {
-        System.out.println("here");
-        Iterable<ProductSearch> list=searchService.searchAllProducts();
-        return searchService.searchAllProducts().toString();
+        return searchService.searchAllProducts();
     }
 
     @RequestMapping(value = "getName/{name}",method = RequestMethod.GET)
@@ -47,4 +45,6 @@ public class SearchController {
     {
         return searchService.findInSearch(searchParameter);
     }
+
+
 }

@@ -23,7 +23,7 @@ public class ProductSearch {
     private String productImage;
 
     @Field
-    private List<String> categories;
+    private List<String> category;
 
     @Field
     private List<String> subCategories;
@@ -72,12 +72,12 @@ public class ProductSearch {
         this.productImage = productImage;
     }
 
-    public List<String> getCategories() {
-        return categories;
+    public List<String> getCategory() {
+        return category;
     }
 
-    public void setCategories(List<String> categories) {
-        this.categories = categories;
+    public void setCategory(List<String> category) {
+        this.category = category;
     }
 
     public List<String> getSubCategories() {

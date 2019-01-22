@@ -11,7 +11,7 @@ public class ProductsSearchDTO {
     private String usp;
     private String productImage;
 
-    private List<String> categories;
+    private List<String> category;
 
     private List<String> subCategories;
 
@@ -57,12 +57,12 @@ public class ProductsSearchDTO {
         this.productImage = productImage;
     }
 
-    public List<String> getCategories() {
-        return categories;
+    public List<String> getCategory() {
+        return category;
     }
 
-    public void setCategories(List<String> categories) {
-        this.categories = categories;
+    public void setCategory(List<String> category) {
+        this.category = category;
     }
 
     public List<String> getSubCategories() {

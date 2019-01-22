@@ -21,7 +21,6 @@ public class SearchServiceImplementation implements SearchService{
 
     @Override
     public Iterable<ProductSearch> searchAllProducts() {
-        Iterable<ProductSearch> list=searchRepository.findAll();
         return searchRepository.findAll();
     }
 
@@ -34,6 +33,5 @@ public class SearchServiceImplementation implements SearchService{
     public List<ProductSearch> findInSearch(String searchParameter) {
         return searchRepository.findInSearch(searchParameter);
     }
-
 
 }

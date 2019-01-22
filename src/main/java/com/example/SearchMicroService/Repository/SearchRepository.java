@@ -9,8 +9,9 @@ import java.util.List;
 
 public interface SearchRepository extends SolrCrudRepository<ProductSearch,String> {
     ProductSearch findByProductName(String name);
-    @Query("productName:*?0* or categories:*?0* OR subCategories:*?0* OR brand:*?0*")
+    @Query("productName:*?0* or category:*?0* OR subCategories:*?0* OR brand:*?0*")
     List<ProductSearch> findInSearch(String searchParameter);
+    @Query("subCategory.category.categoryName")
     List<String> getAllCategories();
 //    List<ProductSearch> findBySubCategory(String subCategory);
 //    List<ProductSearch> findByBrandName(String brand);
